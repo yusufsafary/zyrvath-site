@@ -1,5 +1,5 @@
-// Zyrvath launch clock. Reception opens 2 Nov 2026 at 12.00 UTC (17.00 WIB).
-var LAUNCH_AT = Date.UTC(2026, 10, 2, 12, 0, 0);
+// Zyrvath launch clock. Reception opened 2 Nov 2026 at 09.49 UTC (16.49 WIB), ahead of schedule on the owner order.
+var LAUNCH_AT = Date.UTC(2026, 10, 2, 9, 49, 0);
 function fmtCd(ms) {
   var s = Math.max(0, Math.floor(ms / 1000));
   var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), ss = s % 60;
