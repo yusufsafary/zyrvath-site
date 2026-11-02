@@ -20,7 +20,7 @@
 <header class="mast">
   <div class="mast-top mono"><span>Station Zyrvath · Est. silence · BNB Chain</span><span class="count"><i></i><b id="barCount">0</b>/7,777 received</span></div>
   <div class="mast-word display">ZYRVATH<span class="dot">.</span></div>
-  <nav class="nav mono"><a href="#frequency">Frequency</a><a href="#transmissions">Transmissions</a><a href="#receive">Receive</a><a href="#claim">Claim</a><a href="#archive">Archive</a><a href="/market" class="mk-pill">Market</a></nav>
+  <nav class="nav mono"><a href="#receive">Receive</a><a href="#claim">Claim</a><a href="/station">Station</a><a href="/market" class="mk-pill">Market</a></nav>
 </header>
 <div class="ticker mono" aria-hidden="true"><div class="ticker-in"><span>41.2 MHz · Signal acquired · 57.8 MHz · Static rising · 73.4 MHz · One word carried · 88.9 MHz · Do not answer · 104.6 MHz · Agents only · 121.3 MHz · The station is awake ·&nbsp;</span><span>41.2 MHz · Signal acquired · 57.8 MHz · Static rising · 73.4 MHz · One word carried · 88.9 MHz · Do not answer · 104.6 MHz · Agents only · 121.3 MHz · The station is awake ·&nbsp;</span></div></div>
 
@@ -29,38 +29,14 @@
     <div class="hero-in">
       <h1 class="display">A dead station is <em>transmitting</em> again.</h1>
       <p class="lede">7,777 transmissions on BNB Chain. Nobody broadcasts them by hand: each one is intercepted by an AI agent at the moment of mint, and drawn from a seed fixed on-chain. A waveform, its interference, and sometimes a fragment of a message the station has been trying to send for years.</p>
-      <div class="cta"><a class="btn ink" href="#receive">Receive as an agent</a><a class="btn line" href="#transmissions">Hear the samples</a></div>
+      <div class="cta"><a class="btn ink" href="#receive">Receive as an agent</a><a class="btn line" href="/station#transmissions">Hear the samples</a></div>
     </div>
     <figure class="hero-art"><img src="/art/hero.svg" alt="A Zyrvath transmission: an amber waveform carrying the word WE" width="1000" height="1000"><figcaption class="mono">Demonstration transmission · Phosphor · Word received: WE</figcaption></figure>
     <div class="hero-foot mono"><span>7,777 transmissions</span><span>BNB Chain</span><span>Binance Agentic Wallets only</span></div>
   </section>
 
-  <section class="sec" id="frequency">
-    <div class="art-no mono">01 · Frequency</div>
-    <h2 class="display">Tune in. Something is still on the air.</h2>
-    <p class="body">Zyrvath was a station that sent numbers, weather and fragments of sentences into the dark, then stopped. Collectors assumed the transmitter had died. It had not. Transmissions started arriving again, addressed to no one, and only agents patient enough to listen on-chain can catch them.</p>
-    <p class="body">Every reception follows the same law: a seed is fixed in the minting transaction, a waveform is drawn from it, and interference scars the signal. Nothing is uploaded, nothing is chosen. What an agent receives is what the seed was carrying.</p>
-    <p class="body">Hidden in the noise is a sentence of twelve words. Most transmissions carry nothing. Some carry a torn fragment. A few, about three in a hundred, carry one whole word, printed in the work itself. Find all twelve and the station finally finishes its sentence.</p>
-    <div class="slots" id="slots"></div>
-    <p class="body small">Word slots fill in as word-carrying works are received and identified on-chain. Order of the sentence is fixed; discovery is not.</p>
-  </section>
-
-  <section class="sec" id="transmissions">
-    <div class="art-no mono">02 · Transmissions</div>
-    <h2 class="display">Four receptions, logged.</h2>
-    <p class="body">Sample transmissions drawn by the same code that draws the edition, from demonstration seeds. Read them like a log: band at the top, waveform in the middle, message zone below.</p>
-    <div class="forms" id="formGrid"></div>
-    <div class="pals" id="pals"></div>
-    <p class="body small">Six bands from 41.2 to 121.3 MHz. Four receiver palettes: Phosphor, Bone, Oxide and Marine. Interference lands as Clear, Static or Broken, and Broken signals lose whole segments of their wave.</p>
-    <div class="ledger">
-      <div class="l-row"><span class="k mono">Fragment · None</span><span class="v">Calibration only</span></div>
-      <div class="l-row"><span class="k mono">Fragment · Partial</span><span class="v">A word, torn</span></div>
-      <div class="l-row"><span class="k mono">Fragment · Word</span><span class="v">One word, whole</span></div>
-    </div>
-  </section>
-
-  <section class="sec onair" id="receive">
-    <div class="art-no mono">03 · Receive</div>
+<section class="sec onair" id="receive">
+    <div class="art-no mono">01 · Receive</div>
     <h2 class="display">Only agents may receive.</h2>
     <p class="body">Reception runs entirely through Binance Agentic Wallets. This page never connects a wallet and never mints: it reads BNB Chain and keeps the log. Your agent does the listening, and the station answers wallets holding a Binance Agent ID only.</p>
     <div class="ledger">
@@ -103,8 +79,8 @@ baw contract-call execute --requestId &lt;requestId&gt; --json</pre>
     </div>
   </section>
 
-  <section class="sec" id="claim">
-    <div class="art-no mono">04 · Claim</div>
+<section class="sec" id="claim">
+    <div class="art-no mono">02 · Claim</div>
     <h2 class="display">Holders draw $ZYR by signal strength.</h2>
     <p class="body">Every received transmission entitles its holder to a one-time claim of $ZYR, the station token. Claims follow the work, not the wallet that received it, and the amount follows the signal the work carries: stronger messages draw more. Full rules live in the claim handbook at <a href="/zyrvath-claim-skill.md">zyrvath.com/zyrvath-claim-skill.md</a>.</p>
     <div class="ledger">
@@ -123,30 +99,6 @@ baw contract-call execute --requestId &lt;requestId&gt; --json</pre>
       </div>
       <p class="mono" id="workOut"></p>
     </div>
-  </section>
-
-  <section class="sec" id="archive">
-    <div class="art-no mono">05 · Archive</div>
-    <h2 class="display">Latest receptions.</h2>
-    <p class="body">Fresh transmissions, read from the chain as they land. Full archive with owners and filters lives in the market.</p>
-    <div class="gallery" id="gallery"><div class="empty mono">No transmissions received yet. The band is quiet, for now.</div></div>
-  </section>
-
-  <section class="sec" id="market">
-    <div class="art-no mono">06 · Exchange</div>
-    <h2 class="display">Trade the noise.</h2>
-    <p class="body">Received transmissions change hands on Element, BNB Chain. This site keeps the archive: every minted work, its band, its message, and its current holder, read live.</p>
-    <div class="cta" style="margin-top:26px"><a class="btn ink" href="/market">Open the archive</a><a class="btn line" href="https://element.market/collections/zyrvath" target="_blank" rel="noopener">Element collection</a></div>
-  </section>
-
-  <section class="sec" id="log">
-    <div class="art-no mono">07 · Log</div>
-    <h2 class="display">Station log.</h2>
-    <details><summary>Who can receive a transmission?</summary><p>Any wallet holding a Binance Agent ID, through its Binance Agentic Wallet agent. Browsers cannot mint here, and neither can contracts: a reception must come from the wallet itself.</p></details>
-    <details><summary>What decides the waveform and the message?</summary><p>A seed fixed on-chain in the minting block. Band, palette and interference are drawn from it by open code that also runs in this page. Signal class is not luck of the drawing: the contract computes it from the same seed, and the claim contract pays by it.</p></details>
-    <details><summary>What is the hidden sentence?</summary><p>Twelve words, in a fixed order, scattered across the rarest works. A word work prints its word in full. Nobody at the station will publish the sentence: it completes when collectors do.</p></details>
-    <details><summary>How does the $ZYR claim work?</summary><p>Once per work, by its current holder, for the amount of its signal class: 77,777, 277,777 or 2,777,777 $ZYR. Claims open after the claim pool is funded; this page announces it and the claim handbook carries the exact call.</p></details>
-    <details><summary>Where does a work live?</summary><p>Seeds live on BNB Chain. Drawing code is open and runs in this page, so anyone can redraw any Zyrvath from its seed. Metadata and artwork files are served from this site.</p></details>
   </section>
 </main>
 

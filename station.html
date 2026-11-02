@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Station · Zyrvath</title>
+<meta name="description" content="Zyrvath station: how reception works, sample transmissions, latest receptions and the station log.">
+<meta name="theme-color" content="#0A0908">
+<meta property="og:title" content="Zyrvath Station">
+<meta property="og:description" content="Frequency, samples, archive highlights and the station log.">
+<meta property="og:image" content="https://zyrvath.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+.st-head{padding:58px 20px 10px;max-width:1080px;margin:0 auto}
+.st-word{font-size:clamp(62px,16.5vw,168px);line-height:.98;color:transparent;-webkit-text-stroke:2px var(--ink);margin:12px 0 16px}
+.st-head p{max-width:620px;color:var(--mute)}
+</style>
+</head>
+<body>
+<header class="logbar">
+  <a class="back" href="/">← ZYRVATH</a>
+  <span class="mono">Station · The long version</span>
+  <span class="count mono"><b id="barCount">0</b>/7,777</span>
+</header>
+<nav class="nav mono solo"><a href="/#receive">Receive</a><a href="/#claim">Claim</a><a href="/station" aria-current="page">Station</a><a href="/market">Archive</a></nav>
+
+<section class="st-head">
+  <span class="mono" style="color:var(--acc)">FREQUENCY · SAMPLES · LOG</span>
+  <h1 class="display st-word">STATION</h1>
+  <p>Everything around the reception itself: how the station works, what the samples sound like, and the log so far. Receiving and claiming live on the front page.</p>
+  <div class="logmeta mono">
+    <div><span>Station</span><b>ZYRVATH</b></div>
+    <div><span>Bands</span><b>41.2 to 121.3 MHz</b></div>
+    <div><span>Words</span><b>12, hidden</b></div>
+    <div><span>Mode</span><b>Agent receive only</b></div>
+  </div>
+</section>
+
+<main>
+<section class="sec" id="frequency">
+    <div class="art-no mono">01 · Frequency</div>
+    <h2 class="display">Tune in. Something is still on the air.</h2>
+    <p class="body">Zyrvath was a station that sent numbers, weather and fragments of sentences into the dark, then stopped. Collectors assumed the transmitter had died. It had not. Transmissions started arriving again, addressed to no one, and only agents patient enough to listen on-chain can catch them.</p>
+    <p class="body">Every reception follows the same law: a seed is fixed in the minting transaction, a waveform is drawn from it, and interference scars the signal. Nothing is uploaded, nothing is chosen. What an agent receives is what the seed was carrying.</p>
+    <p class="body">Hidden in the noise is a sentence of twelve words. Most transmissions carry nothing. Some carry a torn fragment. A few, about three in a hundred, carry one whole word, printed in the work itself. Find all twelve and the station finally finishes its sentence.</p>
+    <div class="slots" id="slots"></div>
+    <p class="body small">Word slots fill in as word-carrying works are received and identified on-chain. Order of the sentence is fixed; discovery is not.</p>
+  </section>
+
+<section class="sec" id="transmissions">
+    <div class="art-no mono">02 · Transmissions</div>
+    <h2 class="display">Four receptions, logged.</h2>
+    <p class="body">Sample transmissions drawn by the same code that draws the edition, from demonstration seeds. Read them like a log: band at the top, waveform in the middle, message zone below.</p>
+    <div class="forms" id="formGrid"></div>
+    <div class="pals" id="pals"></div>
+    <p class="body small">Six bands from 41.2 to 121.3 MHz. Four receiver palettes: Phosphor, Bone, Oxide and Marine. Interference lands as Clear, Static or Broken, and Broken signals lose whole segments of their wave.</p>
+    <div class="ledger">
+      <div class="l-row"><span class="k mono">Fragment · None</span><span class="v">Calibration only</span></div>
+      <div class="l-row"><span class="k mono">Fragment · Partial</span><span class="v">A word, torn</span></div>
+      <div class="l-row"><span class="k mono">Fragment · Word</span><span class="v">One word, whole</span></div>
+    </div>
+  </section>
+
+<section class="sec" id="archive">
+    <div class="art-no mono">03 · Archive</div>
+    <h2 class="display">Latest receptions.</h2>
+    <p class="body">Fresh transmissions, read from the chain as they land. Full archive with owners and filters lives in the market.</p>
+    <div class="gallery" id="gallery"><div class="empty mono">No transmissions received yet. The band is quiet, for now.</div></div>
+  </section>
+
+<section class="sec" id="market">
+    <div class="art-no mono">04 · Exchange</div>
+    <h2 class="display">Trade the noise.</h2>
+    <p class="body">Received transmissions change hands on Element, BNB Chain. This site keeps the archive: every minted work, its band, its message, and its current holder, read live.</p>
+    <div class="cta" style="margin-top:26px"><a class="btn ink" href="/market">Open the archive</a><a class="btn line" href="https://element.market/collections/zyrvath" target="_blank" rel="noopener">Element collection</a></div>
+  </section>
+
+<section class="sec" id="log">
+    <div class="art-no mono">05 · Log</div>
+    <h2 class="display">Station log.</h2>
+    <details><summary>Who can receive a transmission?</summary><p>Any wallet holding a Binance Agent ID, through its Binance Agentic Wallet agent. Browsers cannot mint here, and neither can contracts: a reception must come from the wallet itself.</p></details>
+    <details><summary>What decides the waveform and the message?</summary><p>A seed fixed on-chain in the minting block. Band, palette and interference are drawn from it by open code that also runs in this page. Signal class is not luck of the drawing: the contract computes it from the same seed, and the claim contract pays by it.</p></details>
+    <details><summary>What is the hidden sentence?</summary><p>Twelve words, in a fixed order, scattered across the rarest works. A word work prints its word in full. Nobody at the station will publish the sentence: it completes when collectors do.</p></details>
+    <details><summary>How does the $ZYR claim work?</summary><p>Once per work, by its current holder, for the amount of its signal class: 77,777, 277,777 or 2,777,777 $ZYR. Claims open after the claim pool is funded; this page announces it and the claim handbook carries the exact call.</p></details>
+    <details><summary>Where does a work live?</summary><p>Seeds live on BNB Chain. Drawing code is open and runs in this page, so anyone can redraw any Zyrvath from its seed. Metadata and artwork files are served from this site.</p></details>
+  </section>
+</main>
+
+<footer class="foot mono">
+  <span>ZYRVATH · 7,777 TRANSMISSIONS</span>
+  <a id="cLink" href="https://bscscan.com/address/0x2279b94B42BCD80F366F37566cCC1a734a817688" target="_blank" rel="noopener">Contract 0x2279…7688 ↗</a>
+</footer>
+
+<script src="/js/art.js"></script>
+<script src="/js/chain.js"></script>
+<script src="/js/site.js"></script>
+<script src="/js/smooth.js" defer></script>
+</body>
+</html>
