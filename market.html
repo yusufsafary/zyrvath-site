@@ -20,7 +20,7 @@
 .mk-head p{max-width:620px;color:var(--mute)}
 .mk-stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px}
 .mk-stats div b{display:block;font-family:var(--disp);font-weight:400;font-size:34px;color:var(--ink)}
-.mk-tools{position:sticky;top:57px;z-index:10;background:rgba(10,9,8,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.mk-tools{position:sticky;top:46px;z-index:10;background:rgba(10,9,8,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .mk-tools .in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .mk-tools select{flex:1 1 30%;min-width:0}.mk-tools select,.mk-tools input{height:44px;border:1px solid var(--ink);background:var(--paper);font-family:var(--mono);font-size:12px;letter-spacing:.06em;padding:0 12px;color:var(--ink);border-radius:0}
 .mk-tools input{flex:1 1 100%;min-width:0;font-size:16px}@media(min-width:760px){.mk-tools input{flex:1 1 220px;font-size:12px}.mk-tools select{flex:0 0 auto}}
@@ -39,16 +39,23 @@
 </style>
 </head>
 <body>
-<header class="bar">
-  <a class="mark" href="/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 12h4l2.5-7 4 14L16 12h5"/></g></svg>ZYRVATH</a>
-  <nav class="nav mono"><a href="/#frequency">Frequency</a><a href="/#receive">Receive</a><a href="/#claim">Claim</a><a href="/market" aria-current="page">Archive</a></nav>
-  <div class="count mono"><i></i><b id="barCount">0</b>/7,777</div>
+<header class="logbar">
+  <a class="back" href="/">← ZYRVATH</a>
+  <span class="mono">Archive · Receiver log</span>
+  <span class="count mono"><b id="barCount">0</b>/7,777</span>
 </header>
+<nav class="nav mono solo"><a href="/#frequency">Frequency</a><a href="/#receive">Receive</a><a href="/#claim">Claim</a><a href="/market" aria-current="page">Archive</a></nav>
 
 <section class="mk-head">
   <span class="mono" style="color:var(--acc)">06 · Exchange</span>
-  <h1 class="display">Archive.<br><em>Every signal, every holder.</em></h1>
+  <h1 class="display">Archive.<br><em class="outline">Every signal, every holder.</em></h1>
   <p>Every Zyrvath transmission received so far, read live from BNB Chain with its band, its message and its holder. Trading runs through Element on BNB Chain once the collection is indexed there.</p>
+  <div class="logmeta mono">
+    <div><span>Station</span><b>ZYRVATH</b></div>
+    <div><span>Bands</span><b>41.2 to 121.3 MHz</b></div>
+    <div><span>Mode</span><b>Agent receive only</b></div>
+    <div><span>Source</span><b>Live from BNB Chain</b></div>
+  </div>
   <div class="mk-stats mono">
     <div><b id="sMinted">…</b>Received</div>
     <div><b id="sOwners">…</b>Holders</div>
